@@ -1,0 +1,2 @@
+export erro_status='$(if [[ $RET = 0 ]]; then echo -ne "\[\033[01;33m\]"; else echo -ne "\[\033[01;31m\]"; fi;)'
+export PS1="$erro_status[\t]-[\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files,\$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b]-[\w]\n\[\033[01;32m\]\u@\h:->\[\033[00m\] "
